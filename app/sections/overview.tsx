@@ -7,7 +7,7 @@ export default function Overview() {
       <div className="w-full">
         
         {/* Institutional Details & Logos Container */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 border-b border-gray-200 dark:border-gray-700 pb-6 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 border-b border-gray-200 dark:border-gray-700 pb-6 gap-6 md:gap-4">
           
           {/* Left Side: Text Details */}
           <div className="space-y-1 text-md">
@@ -16,8 +16,8 @@ export default function Overview() {
             <p><span className="font-medium text-gray-800 dark:text-gray-200">Program:</span> Bachelor of Science in Information Technology (4th Year)</p>
           </div>
 
-          {/* Right Side: Logos */}
-          <div className="flex flex-row gap-4 items-center shrink-0">
+          {/* Right Side: Logos (Fixed mobile centering) */}
+          <div className="flex flex-row gap-4 items-center shrink-0 w-full justify-center md:w-auto md:justify-end">
             <img src="/pictures/dost-logo.png" alt="DOST Bicol Logo" className="w-16 h-16 object-contain" /> 
             <img src="/pictures/bu-logo.png" alt="BU Logo" className="w-20 h-20 object-contain" /> 
             <img src="/pictures/cs-logo.png" alt="BUCS Logo" className="w-16 h-16 object-contain" /> 
@@ -38,7 +38,7 @@ export default function Overview() {
           </p>
 
           {/* Transition Subheading */}
-          <h3 className="font-semibold text-lg mt-8 mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2 inline-block">
+          <h3 className="font-semibold text-lg mt-8 mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-4 block w-full">
             How I Got Here
           </h3>
 
