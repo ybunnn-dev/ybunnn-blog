@@ -2,37 +2,26 @@
 
 import { useState } from "react";
 
-// Dummy image data - replace the bg-colors with actual image URLs later
 const INITIAL_IMAGES = [
-  { id: 1, src: "/placeholder-1.jpg", color: "bg-blue-400 dark:bg-blue-600", title: "FAS Setup" },
-  { id: 2, src: "/placeholder-2.jpg", color: "bg-emerald-400 dark:bg-emerald-600", title: "Orientation" },
-  { id: 3, src: "/placeholder-3.jpg", color: "bg-amber-400 dark:bg-amber-600", title: "App Scripting" },
-  { id: 4, src: "/placeholder-4.jpg", color: "bg-purple-400 dark:bg-purple-600", title: "DOST Staff" },
-  { id: 5, src: "/placeholder-5.jpg", color: "bg-rose-400 dark:bg-rose-600", title: "Zumba Friday" },
-  { id: 6, src: "/placeholder-6.jpg", color: "bg-cyan-400 dark:bg-cyan-600", title: "Flag Lowering" },
+  { id: 1, src: "/pictures/week1/placeholder-1.jpg", color: "bg-blue-400 dark:bg-blue-600", title: "FAS Setup" },
+  { id: 2, src: "/pictures/week1/placeholder-2.jpg", color: "bg-emerald-400 dark:bg-emerald-600", title: "Orientation" },
+  { id: 3, src: "/pictures/week1/placeholder-3.jpg", color: "bg-amber-400 dark:bg-amber-600", title: "App Scripting" },
+  { id: 4, src: "/pictures/week1/placeholder-4.jpg", color: "bg-purple-400 dark:bg-purple-600", title: "DOST Staff" },
+  { id: 5, src: "/pictures/week1/placeholder-5.jpg", color: "bg-rose-400 dark:bg-rose-600", title: "Zumba Friday" },
+  { id: 6, src: "/pictures/week1/placeholder-6.jpg", color: "bg-cyan-400 dark:bg-cyan-600", title: "Flag Lowering" },
 ];
 
 export default function Week1() {
-  // State to hold the rotating array of images
-  const [images, setImages] = useState(INITIAL_IMAGES);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  // Rotating Array Logic
+  const activeImage = INITIAL_IMAGES[activeIndex];
+
   const handleNext = () => {
-    setImages((prev) => {
-      const newArray = [...prev];
-      const firstItem = newArray.shift(); // Remove first item
-      if (firstItem) newArray.push(firstItem); // Push it to the end
-      return newArray;
-    });
+    setActiveIndex((prev) => (prev + 1) % INITIAL_IMAGES.length);
   };
 
   const handlePrev = () => {
-    setImages((prev) => {
-      const newArray = [...prev];
-      const lastItem = newArray.pop(); // Remove last item
-      if (lastItem) newArray.unshift(lastItem); // Put it at the beginning
-      return newArray;
-    });
+    setActiveIndex((prev) => (prev === 0 ? INITIAL_IMAGES.length - 1 : prev - 1));
   };
 
   return (
@@ -43,38 +32,82 @@ export default function Week1() {
         <p className="text-cyan-600 dark:text-cyan-400 font-medium mt-1">February 20, 2026 (Friday)</p>
       </div>
 
-      {/* Responsive Infinite Carousel */}
-      <div className="relative w-full mb-8 group">
-        {/* Images Container */}
-        <div className="flex gap-4 overflow-hidden transition-all duration-300">
-          {images.map((img, index) => (
-            <div 
-              key={img.id}
-              // The classes below handle the responsiveness: 1 on mobile, 3 on lg, 5 on xl
-              className={`flex-shrink-0 transition-all duration-500 ease-in-out w-full lg:w-[calc(33.333%-0.66rem)] xl:w-[calc(20%-0.8rem)] aspect-video rounded-lg flex items-center justify-center shadow-sm border border-gray-200 dark:border-gray-700 ${img.color}`}
-            >
-              {/* Replace this span with an actual <img src={img.src} /> tag later */}
-              <span className="text-white font-bold tracking-wider shadow-sm">{img.title}</span>
-            </div>
-          ))}
+      {/* --- E-COMMERCE STYLE GALLERY --- */}
+      <div className="w-full mb-8">
+        
+        {/* 1. Main Display View (True to size) */}
+        <div className="relative w-full aspect-video md:aspect-[2/1] lg:aspect-[16/7] rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 mb-3 group shadow-sm">
+          
+          <div key={activeIndex} className={`relative w-full h-full flex items-center justify-center animate-fade-in ${activeImage.color}`}>
+             
+             {/* Fallback Text (Sits behind the image) */}
+             <span className="absolute inset-0 flex items-center justify-center text-white text-xl md:text-3xl font-bold tracking-wider shadow-sm z-10 text-center px-4">
+                {activeImage.title}
+             </span>
+
+             {/* Main Image: object-contain with pure black background to prevent cropping */}
+             <img 
+                src={activeImage.src} 
+                alt={activeImage.title} 
+                className="relative w-full h-full object-contain bg-black z-20"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+             />
+          </div>
+
+          {/* Left/Right Controls on Main Image */}
+          <button 
+            onClick={handlePrev}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-gray-900/90 hover:bg-white dark:hover:bg-gray-800 text-gray-800 dark:text-white p-2.5 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-30"
+            aria-label="Previous Image"
+          >
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7"></path></svg>
+          </button>
+          <button 
+            onClick={handleNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-gray-900/90 hover:bg-white dark:hover:bg-gray-800 text-gray-800 dark:text-white p-2.5 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 z-30"
+            aria-label="Next Image"
+          >
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7"></path></svg>
+          </button>
         </div>
 
-        {/* Carousel Controls */}
-        <button 
-          onClick={handlePrev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-700 text-gray-800 dark:text-white p-2 rounded-full shadow-md backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
-          aria-label="Previous Image"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
-        </button>
-        <button 
-          onClick={handleNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-700 text-gray-800 dark:text-white p-2 rounded-full shadow-md backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
-          aria-label="Next Image"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-        </button>
+        {/* 2. Thumbnail Navigation Carousel (Clean, filled boxes) */}
+        <div className="flex gap-2.5 overflow-x-auto pb-2 hide-scrollbar w-full snap-x justify-start lg:justify-center">
+          {INITIAL_IMAGES.map((img, index) => {
+            const isActive = index === activeIndex;
+            return (
+              <button
+                key={img.id}
+                onClick={() => setActiveIndex(index)}
+                className={`relative flex-shrink-0 w-24 md:w-32 aspect-video rounded-md overflow-hidden transition-all duration-300 snap-center border-2 ${
+                  isActive 
+                    ? "border-cyan-500 ring-2 ring-cyan-500/30 opacity-100 shadow-md" 
+                    : "border-transparent opacity-60 hover:opacity-100 dark:opacity-50 dark:hover:opacity-100"
+                } ${img.color}`}
+              >
+                {/* Thumbnail Fallback Text */}
+                <span className="absolute inset-0 flex items-center justify-center text-white text-[10px] md:text-xs font-bold z-10 text-center px-1">
+                  {img.title}
+                </span>
+
+                {/* Thumbnail Image: object-cover for a clean, uniform look without black bars */}
+                <img 
+                  src={img.src} 
+                  alt={img.title} 
+                  className="relative w-full h-full object-cover z-20"
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                />
+                
+                {/* Active Indicator Overlay */}
+                {isActive && <div className="absolute inset-0 bg-cyan-500/20 mix-blend-overlay z-30"></div>}
+              </button>
+            );
+          })}
+        </div>
       </div>
+      {/* --- END GALLERY --- */}
 
       {/* Narrative Content */}
       <div className="space-y-5 text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
