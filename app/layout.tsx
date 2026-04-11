@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Ybunnn Blog",
     images: [
       {
-        url: "https://ybunnn-blog.vercel.app/og-image.jpg", // IMPORTANT
+        url: "https://ybunnn-blog.vercel.app/pictures/og-image.jpg", // IMPORTANT
         width: 1200,
         height: 630,
       },
