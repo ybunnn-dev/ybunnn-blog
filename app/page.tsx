@@ -3,12 +3,44 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
-// --- SKELETON LOADER COMPONENT ---
+// --- SKELETON LOADER COMPONENTS ---
 const SkeletonCard = ({ className }: { className?: string }) => (
   <div className={`bg-gray-200 dark:bg-gray-800 animate-pulse rounded-lg ${className}`}></div>
 );
 
+const NarrativeSkeleton = () => (
+  <div className="w-full animate-pulse">
+    {/* Header Skeleton */}
+    <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-1/3 mb-2"></div>
+    <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/4 mb-8"></div>
+    
+    {/* Carousel Skeleton */}
+    <div className="flex gap-4 mb-8 overflow-hidden">
+       <div className="w-full lg:w-[calc(33.333%-0.66rem)] xl:w-[calc(20%-0.8rem)] aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg flex-shrink-0"></div>
+       <div className="hidden lg:block w-[calc(33.333%-0.66rem)] xl:w-[calc(20%-0.8rem)] aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg flex-shrink-0"></div>
+       <div className="hidden lg:block w-[calc(33.333%-0.66rem)] xl:w-[calc(20%-0.8rem)] aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg flex-shrink-0"></div>
+    </div>
+    
+    {/* Text Skeleton */}
+    <div className="space-y-3">
+      <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full"></div>
+      <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6"></div>
+      <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/6"></div>
+    </div>
+  </div>
+);
+
 // --- DYNAMIC IMPORTS ---
+
+// Narrative Weeks
+const LazyWeek1 = dynamic(() => import("./sections/narrative/weeks/week1"), {
+  loading: () => <NarrativeSkeleton />,
+});
+// const LazyWeek2 = dynamic(() => import("./sections/narrative/weeks/week2"), {
+//   loading: () => <NarrativeSkeleton />,
+// });
+
+// Main Sections
 const LazyNarrativeNav = dynamic(
   () => import("./sections/narrative/navigation/navigation"),
   {
@@ -37,12 +69,40 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   
   // --- NARRATIVE STATE ---
-  // FIXED: Properly named both the variable and the setter to match what is used below.
   const [selectedWeek, setSelectedWeek] = useState<string>("Week 1");
 
-  // FIXED: Replaced 'any' with 'string' for proper TypeScript support
   const handleNarrativeChange = (week: string) => {
     setSelectedWeek(week);
+  };
+
+  // --- NARRATIVE RENDERER ---
+  // Helper function to render the correct week based on state
+  const renderNarrativeContent = () => {
+    switch (selectedWeek) {
+      case "Week 1":
+        return <LazyWeek1 />;
+      case "Week 2":
+        return <div className="text-gray-500 dark:text-gray-400">Week 2 content coming soon...</div>;
+
+      case "Week 3":
+        return <div className="text-gray-500 dark:text-gray-400">Week 3 content coming soon...</div>;
+
+      case "Week 4":
+        return <div className="text-gray-500 dark:text-gray-400">Week 4 content coming soon...</div>;
+
+      case "Week 5":
+        return <div className="text-gray-500 dark:text-gray-400">Week 5 content coming soon...</div>;
+
+      case "Week 6":
+        return <div className="text-gray-500 dark:text-gray-400">Week 6 content coming soon...</div>;
+      // Add cases up to Week 13...
+      default:
+        return (
+          <div className="text-center text-gray-500 dark:text-gray-400 py-10">
+            Select a week above to view the narrative report.
+          </div>
+        );
+    }
   };
 
   // 1. Check local storage and system preference on initial load
@@ -124,15 +184,9 @@ export default function Home() {
           <h2 className="font-semibold text-xl mb-3 text-gray-800 dark:text-white">Narrative Reports</h2>
           <LazyNarrativeNav onSelectNarrative={handleNarrativeChange} />      
 
-          {/* This is the container where your actual week's report will show up */}
+          {/* Narrative Content Container */}
           <div className="mt-4 bg-white dark:bg-[#1E293B] rounded-lg p-6 border border-gray-200 dark:border-gray-700 transition-colors duration-300 min-h-[300px]">
-            <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-2 border-b border-gray-100 dark:border-gray-700 pb-2">
-              {selectedWeek} Narrative Report
-            </h3>
-            
-            <p className="text-gray-600 dark:text-gray-400 text-sm mt-4">
-              Currently viewing the narrative report for {selectedWeek}.
-            </p>
+            {renderNarrativeContent()}
           </div>
         </div>
       </main>

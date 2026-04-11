@@ -16,10 +16,10 @@ export default function NarrativeNavigation({ onSelectNarrative }) {
   };
 
   return (
-    <div className="bg-white dark:bg-[#1E293B] rounded-lg p-6 border border-gray-200 dark:border-gray-700 transition-colors duration-300 w-full">
+    <div className="bg-white dark:bg-[#1E293B] rounded-lg p-2 border border-gray-200 dark:border-gray-700 transition-colors duration-300 w-full">
       
       {/* Scrollable Row of Week Pills */}
-      <div className="flex w-full overflow-x-auto hide-scrollbar gap-2 pb-2">
+      <div className="flex w-full overflow-x-auto hide-scrollbar gap-2 p-2">
         {weeks.map((week) => {
           const isActive = activeWeek === week;
           return (
