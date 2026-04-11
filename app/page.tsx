@@ -14,7 +14,7 @@ const LazyProfileSec = dynamic(() => import("./sections/profile_section"), {
   loading: () => <SkeletonCard className="w-full h-[350px]" />
 });
 
-const LazyAboutMe = dynamic(() => import("./sections/about"), {
+const LazyOverView = dynamic(() => import("./sections/overview"), {
   ssr: false,
   loading: () => <SkeletonCard className="w-full h-[250px]" />
 });
@@ -24,9 +24,9 @@ const LazyEducation = dynamic(() => import("./sections/education"), {
   loading: () => <SkeletonCard className="w-full h-[150px]" />
 });
 
-const LazyExperience = dynamic(() => import("./sections/experience"), {
+const LazyInternshipProgress = dynamic(() => import("./sections/progress"), {
   ssr: false,
-  loading: () => <SkeletonCard className="w-full h-full min-h-[400px]" />
+  loading: () => <SkeletonCard className="w-full h-full" />
 });
 
 
@@ -86,15 +86,12 @@ export default function Home() {
           
           {/* LEFT COLUMN */}
           <div className="col-span-1 lg:col-span-4 flex flex-col gap-4">
-            <LazyAboutMe />
-            <div className="flex-1">
-              <LazyEducation />
-            </div>
+            <LazyOverView />
           </div>
 
           {/* RIGHT COLUMN */}
           <div className="col-span-1 lg:col-span-2">
-             <LazyExperience />
+             <LazyInternshipProgress />
           </div>
 
         </div>

@@ -22,14 +22,14 @@ export default function ProfileCard({ data }: ProfileCardProps) {
             
             {/* 2. LIGHT MODE IMAGE: Visible normally, hidden in dark mode (dark:hidden) */}
             <img 
-              src="/pictures/main_pic_2.png" 
+              src="/pictures/belaro-icon.jpg" 
               alt="John Ivan B. Belaro"
               className="w-full h-full object-cover object-top block dark:hidden"
             />
 
             {/* 3. DARK MODE IMAGE: Hidden normally, visible in dark mode (dark:block) */}
             <img 
-              src="/pictures/main_pic-dark.png" 
+              src="/pictures/belaro-icon.jpg" 
               alt="John Ivan B. Belaro"
               className="w-full h-full object-cover object-top hidden dark:block"
             />
@@ -47,14 +47,14 @@ export default function ProfileCard({ data }: ProfileCardProps) {
           
           {/* Added dark:text-gray-300 */}
           <p className="text-normal_text dark:text-gray-300 text-sm font-medium transition-colors">
-            An Aspiring Full-Stack Web Developer
+            IT Intern | Full-Stack Developer | Technical Assistant
           </p>
           
           {/* Buttons & Icons Row */}
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 mt-2">
             
             <button className="bg-gray-500 hover:bg-gray-700 text-white text-sm px-4 py-2 rounded-md font-medium transition-colors font-semibold">
-              Download CV
+              See Portfolio
             </button>
             
             {/* Social Icons Container */}
