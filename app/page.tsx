@@ -65,6 +65,11 @@ const LazyInternshipProgress = dynamic(() => import("./sections/progress"), {
   loading: () => <SkeletonCard className="w-full h-full" />
 });
 
+const LazyExperience = dynamic(() => import("./sections/experience"), {
+  ssr: false,
+  loading:() => <SkeletonCard className="w-full h-full" />
+});
+
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -175,8 +180,13 @@ export default function Home() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="col-span-1 lg:col-span-2">
-             <LazyInternshipProgress />
+          <div className="col-span-1 lg:col-span-2 grid grid-rows-5 gap-3">
+            <div className="row-span-2">
+              <LazyInternshipProgress />
+            </div>
+            <div className="row-span-3">
+              <LazyExperience />
+            </div>
           </div>
         </div>
 
