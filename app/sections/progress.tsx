@@ -10,11 +10,11 @@ export default function InternshipProgress() {
   // Calculate percentages
   const hoursPercent = Math.min(100, (currentHours / requiredHours) * 100).toFixed(1);
   const daysPercent = Math.min(100, (currentDays / requiredDays) * 100).toFixed(1);
-  const remainingHours = Math.max(0, requiredHours - currentHours);
 
   return (
     <div className="bg-white dark:bg-[#1E293B] rounded-lg p-6 border border-gray-200 dark:border-gray-700 h-full transition-colors duration-300 flex flex-col justify-center">
-      <h2 className="font-semibold text-xl mb-8 text-gray-700 dark:text-white">Internship Progress</h2>
+      <h2 className="font-semibold text-xl mb-2 text-gray-700 dark:text-white">Internship Progress</h2>
+      <hr className="text-gray-200 dark:text-gray-700 mb-2"></hr>
       
       <div className="space-y-8">
         {/* Hours Progress Bar */}
@@ -55,11 +55,25 @@ export default function InternshipProgress() {
           </div>
         </div>
         
-        {/* Remaining Time Summary Banner */}
+        {/* Current Schedule Banner */}
         <div className="mt-6 p-4 bg-slate-50 dark:bg-[#0F172A] rounded-lg border border-slate-200 dark:border-gray-700">
-          <p className="text-sm text-gray-700 dark:text-gray-300 text-center">
-            <strong className="text-blue-400">{remainingHours} hours</strong> left to complete the internship requirement.
-          </p>
+          <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-3 border-b border-gray-200 dark:border-gray-600 pb-2">
+            Current Schedule
+          </h4>
+          <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+            <li className="flex justify-between items-center">
+              <span className="font-medium text-gray-700 dark:text-gray-300">Mon - Thu:</span>
+              <span className="text-right">
+                7:00 AM - 6:00 PM <span className="text-[11px] uppercase font-semibold tracking-wider text-gray-500 dark:text-gray-500 ml-1">(Flexible)</span>
+              </span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span className="font-medium text-gray-700 dark:text-gray-300">Friday:</span>
+              <span className="text-right">
+                7:00 AM - 12:00 PM <span className="text-[11px] uppercase tracking-wider font-bold text-blue-500 dark:text-blue-400 ml-1">(WFH)</span>
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

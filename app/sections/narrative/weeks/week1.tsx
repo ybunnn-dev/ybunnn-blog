@@ -104,7 +104,7 @@ export default function Week1() {
                 />
                 
                 {/* Active Indicator Overlay */}
-                {isActive && <div className="absolute inset-0 bg-cyan-500/20 mix-blend-overlay z-30"></div>}
+                {isActive && <div className="absolute inset-0 bg-transparent mix-blend-overlay z-30"></div>}
               </button>
             );
           })}

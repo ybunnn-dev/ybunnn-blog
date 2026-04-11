@@ -26,6 +26,9 @@ export default function Overview() {
           {/* Internship Role Overview */}
           <div className="text-sm leading-relaxed space-y-3">
             <p>
+              Hi, I am Ivan. A 4th Year BS Information Technology Student at Bicol University College of Science. 
+            </p>
+            <p>
               Currently undertaking my internship at the Department of Science and Technology (DOST) Bicol, where I actively apply my academic foundation in a fast-paced professional environment.
             </p>
             <p>

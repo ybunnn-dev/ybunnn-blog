@@ -36,9 +36,10 @@ const NarrativeSkeleton = () => (
 const LazyWeek1 = dynamic(() => import("./sections/narrative/weeks/week1"), {
   loading: () => <NarrativeSkeleton />,
 });
-// const LazyWeek2 = dynamic(() => import("./sections/narrative/weeks/week2"), {
-//   loading: () => <NarrativeSkeleton />,
-// });
+
+const LazyWeek2 = dynamic(() => import("./sections/narrative/weeks/week2"), {
+  loading: () => <NarrativeSkeleton />,
+});
 
 // Main Sections
 const LazyNarrativeNav = dynamic(
@@ -49,7 +50,7 @@ const LazyNarrativeNav = dynamic(
   }
 );
 
-const LazyProfileSec = dynamic(() => import("./sections/profile_section"), {
+const LazyProfileSec = dynamic(() => import("./sections/profile/profile_section"), {
   ssr: false,
   loading: () => <SkeletonCard className="w-full h-[350px]" />
 });
@@ -82,7 +83,7 @@ export default function Home() {
       case "Week 1":
         return <LazyWeek1 />;
       case "Week 2":
-        return <div className="text-gray-500 dark:text-gray-400">Week 2 content coming soon...</div>;
+        return <LazyWeek2 />;
 
       case "Week 3":
         return <div className="text-gray-500 dark:text-gray-400">Week 3 content coming soon...</div>;
