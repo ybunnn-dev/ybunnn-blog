@@ -26,11 +26,11 @@ export default function InternshipProgress() {
                 {currentHours} / {requiredHours} Hours
               </span>
             </div>
-            <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">{hoursPercent}%</span>
+            <span className="text-sm font-semibold text-blue-400">{hoursPercent}%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-3 dark:bg-gray-700 overflow-hidden shadow-inner">
             <div 
-              className="bg-blue-600 h-3 rounded-full transition-all duration-1000 ease-out" 
+              className="bg-blue-400 h-3 rounded-full transition-all duration-1000 ease-out" 
               style={{ width: `${hoursPercent}%` }}
             ></div>
           </div>
@@ -45,11 +45,11 @@ export default function InternshipProgress() {
                 {currentDays} / {requiredDays} Days
               </span>
             </div>
-            <span className="text-sm font-semibold text-emerald-500 dark:text-emerald-400">{daysPercent}%</span>
+            <span className="text-sm font-semibold text-emerald-400">{daysPercent}%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-3 dark:bg-gray-700 overflow-hidden shadow-inner">
             <div 
-              className="bg-emerald-500 h-3 rounded-full transition-all duration-1000 ease-out" 
+              className="bg-emerald-400 h-3 rounded-full transition-all duration-1000 ease-out" 
               style={{ width: `${daysPercent}%` }}
             ></div>
           </div>
@@ -58,7 +58,7 @@ export default function InternshipProgress() {
         {/* Remaining Time Summary Banner */}
         <div className="mt-6 p-4 bg-slate-50 dark:bg-[#0F172A] rounded-lg border border-slate-200 dark:border-gray-700">
           <p className="text-sm text-gray-700 dark:text-gray-300 text-center">
-            <strong className="text-blue-600 dark:text-blue-400">{remainingHours} hours</strong> left to complete the internship requirement.
+            <strong className="text-blue-400">{remainingHours} hours</strong> left to complete the internship requirement.
           </p>
         </div>
       </div>
