@@ -2,15 +2,16 @@
 
 import { SetStateAction, useState } from "react";
 
-export default function NarrativeNavigation({ onSelectNarrative }) {
-  // Generate an array of 13 weeks based on your Feb 20 - May 16 timeline
+type Props = {
+  onSelectNarrative?: (week: string) => void;
+};
+
+export default function NarrativeNavigation({ onSelectNarrative }: Props) {
   const weeks = Array.from({ length: 13 }, (_, i) => `Week ${i + 1}`);
 
-  // Default to Week 1
   const [activeWeek, setActiveWeek] = useState(weeks[0]);
 
-  // Handler for changing week
-  const handleWeekClick = (week: SetStateAction<string>) => {
+  const handleWeekClick = (week: string) => {
     setActiveWeek(week);
     if (onSelectNarrative) onSelectNarrative(week);
   };

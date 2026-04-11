@@ -1,6 +1,6 @@
 export default function Overview() {
   return (
-    <div className="bg-white dark:bg-[#1E293B] rounded-lg p-6 border border-gray-200 dark:border-gray-700 text-header_text dark:text-gray-300 transition-colors duration-300">
+    <div className="bg-white dark:bg-[#1E293B] rounded-lg p-6 pb-22 border border-gray-200 dark:border-gray-700 text-header_text dark:text-gray-300 transition-colors duration-300">
       
       <h2 className="font-semibold text-xl mb-5 text-gray-800 dark:text-white">Internship Overview</h2>
       

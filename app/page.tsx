@@ -201,6 +201,9 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <div className="w-full flex items-center justify-center text-gray-800 dark:text-white font-light text-xs">
+         <p>This blog is Powered By Next.JS | TailwindCSS | Typescript | Vercel</p>
+      </div>
     </div>
   );
 }
