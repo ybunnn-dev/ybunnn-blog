@@ -3,12 +3,12 @@
 import { useState } from "react";
 
 const INITIAL_IMAGES = [
-  { id: 1, src: "/pictures/week1/placeholder-1.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "FAS Setup" },
-  { id: 2, src: "/pictures/week1/placeholder-2.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Orientation" },
-  { id: 3, src: "/pictures/week1/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "App Scripting" },
-  { id: 4, src: "/pictures/week1/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "DOST Staff" },
-  { id: 5, src: "/pictures/week1/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Zumba Friday" },
-  { id: 6, src: "/pictures/week1/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Flag Lowering" },
+  { id: 1, src: "/pictures/week2/placeholder-1.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "FAS Setup" },
+  { id: 2, src: "/pictures/week2/placeholder-2.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Orientation" },
+  { id: 3, src: "/pictures/week2/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "App Scripting" },
+  { id: 4, src: "/pictures/week2/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "DOST Staff" },
+  { id: 5, src: "/pictures/week2/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Zumba Friday" },
+  { id: 6, src: "/pictures/week2/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Flag Lowering" },
 ];
 
 export default function Week2() {
