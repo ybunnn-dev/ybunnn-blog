@@ -64,7 +64,7 @@ export default function InternshipProgress() {
             <li className="flex justify-between items-center">
               <span className="font-medium text-gray-700 dark:text-gray-300">Mon - Thu:</span>
               <span className="text-right">
-                7:00 AM - 6:00 PM <span className="text-[11px] uppercase font-semibold tracking-wider text-gray-500 dark:text-gray-500 ml-1">(Flexible)</span>
+                7:00 AM - 6:00 PM <span className="text-[11px] uppercase font-semibold tracking-wider text-gray-500 dark:text-gray-500 ml-1">(Onsite)</span>
               </span>
             </li>
             <li className="flex justify-between items-center">
