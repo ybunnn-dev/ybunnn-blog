@@ -1,11 +1,11 @@
 export default function InternshipProgress() {
   // --- Update your current progress here ---
   const requiredHours = 486;
-  const currentHours = 120; // Replace with your actual hours rendered
+  const currentHours = 363; // Replace with your actual hours rendered
   
   // Assuming a standard 8-hour workday: 486 / 8 = 60.75 days (rounded up to 61)
   const requiredDays = 61; 
-  const currentDays = 15;   // Replace with your actual days rendered
+  const currentDays = 41;   // Replace with your actual days rendered
   
   // Calculate percentages
   const hoursPercent = Math.min(100, (currentHours / requiredHours) * 100).toFixed(1);
