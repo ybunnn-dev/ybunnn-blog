@@ -28,7 +28,7 @@ export default function Week2() {
     <div className="w-full animate-fade-in">
       {/* Dynamic Header */}
       <div className="mb-6 border-b border-gray-200 dark:border-gray-700 pb-4">
-        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Week 2 Narrative Report</h3>
+        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Week 2: Planning, Coordination, and System Preparation</h3>
         <p className="text-cyan-600 dark:text-cyan-400 font-medium mt-1">February 23, 2026 - February 27, 2026</p>
       </div>
 
@@ -115,23 +115,53 @@ export default function Week2() {
       {/* Narrative Content */}
       <div className="space-y-5 text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
         <p>
-          My internship journey officially began today, and walking into the Department of Science and Technology (DOST) office brought a mix of excitement and nervousness. Being exposed to a professional government working environment for the first time was intimidating, but the welcoming atmosphere quickly put me at ease.
+          During the second week of my internship at the Department of Science and Technology (DOST), 
+          our team focused on the initial planning and coordination stages for two systems: the 
+          Document Tracking and Communication System (DOCS) and the Event Management System (EMS). 
+          This week involved discussions, brainstorming sessions, and technical preparation activities 
+          that helped establish the foundation of both projects.
         </p>
 
         <p>
-          The day started with formal introductions. I had the opportunity to meet the staff members and undergo a brief orientation where we discussed workplace expectations, my role, and the technical scope of my tasks for the upcoming weeks.
+          One of the major activities conducted during the week was an interview session at the Records Management Unit 
+          regarding the DOCS project. The discussion helped us gather relevant information about 
+          existing workflows, user requirements, and possible improvements that could be integrated 
+          into the system.
+        </p>
+
+        <p>
+          In addition, brainstorming sessions were conducted for both DOCS and EMS to identify 
+          suitable features, workflows, and design approaches. These collaborative discussions 
+          contributed to the overall planning and direction of the systems.
         </p>
 
         <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg border-l-4 border-cyan-500 my-6">
-          <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Key Tasks & Learnings:</h4>
+          <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+            Key Tasks & Contributions:
+          </h4>
+
           <ul className="list-disc list-inside space-y-1 text-sm">
-            <li>Provided hands-on technical assistance by setting up a computer workstation in the Finance and Administrative Services (FAS) division.</li>
-            <li>Received my first introduction to <strong>Google Apps Script</strong> automation, laying the groundwork for streamlining office workflows.</li>
+            <li>Participated in planning and coordination activities for ongoing system projects.</li>
+            <li>Conducted information gathering and consultation activities with office personnel.</li>
+            <li>Contributed to brainstorming sessions for workflow and process improvements.</li>
+            <li>Created visual documentation and process diagrams for system planning.</li>
+            <li>Assisted in preparing interface layouts and design prototypes.</li>
+            <li>Provided technical assistance for office software and hardware setup.</li>
+            <li>Installed and configured necessary drivers and productivity tools.</li>
+            <li>Performed troubleshooting and maintenance for office equipment.</li>
           </ul>
         </div>
 
         <p>
-          Beyond the technical tasks, I also got to experience the agency's workplace culture. After the traditional Friday flag-lowering ceremony, I participated in their weekly Zumba session. It was a fun, unexpected way to end my first day and a great opportunity to bond with my new colleagues in a more relaxed setting. 
+          Aside from system planning and design tasks, I was also given opportunities to provide 
+          technical assistance within the office. These tasks improved my problem-solving skills 
+          and allowed me to apply practical IT knowledge in a real working environment.
+        </p>
+
+        <p>
+          Overall, the second week provided valuable experience in system analysis, collaborative 
+          planning, and technical support. It also gave me a better understanding of how technology 
+          solutions are conceptualized and prepared before actual system development begins.
         </p>
       </div>
     </div>

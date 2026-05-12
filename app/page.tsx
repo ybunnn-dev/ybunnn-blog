@@ -41,6 +41,10 @@ const LazyWeek2 = dynamic(() => import("./sections/narrative/weeks/week2"), {
   loading: () => <NarrativeSkeleton />,
 });
 
+const LazyWeek3 = dynamic(() => import("./sections/narrative/weeks/week3"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
 // Main Sections
 const LazyNarrativeNav = dynamic(
   () => import("./sections/narrative/navigation/navigation"),
@@ -89,6 +93,7 @@ export default function Home() {
 
       case "Week 3":
         return <div className="text-gray-500 dark:text-gray-400">Week 3 content coming soon...</div>;
+        //return <LazyWeek3 />;
 
       case "Week 4":
         return <div className="text-gray-500 dark:text-gray-400">Week 4 content coming soon...</div>;
@@ -197,7 +202,7 @@ export default function Home() {
         </div>
       </main>
       <div className="w-full flex items-center justify-center text-gray-800 dark:text-white font-light text-xs">
-         <p>This blog is Powered By Next.JS | TailwindCSS | Typescript | Vercel</p>
+        <p>© 2026 John Ivan B. Belaro. All rights reserved.</p>
       </div>
     </div>
   );
