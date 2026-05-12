@@ -28,7 +28,7 @@ export default function Week1() {
     <div className="w-full animate-fade-in">
       {/* Dynamic Header */}
       <div className="mb-6 border-b border-gray-200 dark:border-gray-700 pb-4">
-        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Week 1 Narrative Report</h3>
+        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Week 1: First Steps Into the Professional World</h3>
         <p className="text-cyan-600 dark:text-cyan-400 font-medium mt-1">February 20, 2026</p>
       </div>
 
