@@ -8,7 +8,6 @@ const INITIAL_IMAGES = [
   { id: 3, src: "/pictures/week5/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Laravel Backend" },
   { id: 4, src: "/pictures/week5/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "IPv6 Booklet" },
   { id: 5, src: "/pictures/week5/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Training Event" },
-  { id: 6, src: "/pictures/week5/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "IT Professionals" },
 ];
 
 export default function Week5() {

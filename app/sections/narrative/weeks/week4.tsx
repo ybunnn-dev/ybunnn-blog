@@ -8,7 +8,6 @@ const INITIAL_IMAGES = [
   { id: 3, src: "/pictures/week4/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Frontend Coding" },
   { id: 4, src: "/pictures/week4/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Hardware Setup" },
   { id: 5, src: "/pictures/week4/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Office Config" },
-  { id: 6, src: "/pictures/week4/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "End of Week" },
 ];
 
 export default function Week4() {

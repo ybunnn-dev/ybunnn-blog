@@ -7,8 +7,6 @@ const INITIAL_IMAGES = [
   { id: 2, src: "/pictures/week3/placeholder-2.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Orientation" },
   { id: 3, src: "/pictures/week3/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "App Scripting" },
   { id: 4, src: "/pictures/week3/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "DOST Staff" },
-  { id: 5, src: "/pictures/week3/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Zumba Friday" },
-  { id: 6, src: "/pictures/week3/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Flag Lowering" },
 ];
 
 export default function Week3() {
