@@ -33,6 +33,7 @@ const NarrativeSkeleton = () => (
 // --- DYNAMIC IMPORTS ---
 
 // Narrative Weeks
+// Narrative Weeks
 const LazyWeek1 = dynamic(() => import("./sections/narrative/weeks/week1"), {
   loading: () => <NarrativeSkeleton />,
 });
@@ -42,6 +43,46 @@ const LazyWeek2 = dynamic(() => import("./sections/narrative/weeks/week2"), {
 });
 
 const LazyWeek3 = dynamic(() => import("./sections/narrative/weeks/week3"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek4 = dynamic(() => import("./sections/narrative/weeks/week4"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek5 = dynamic(() => import("./sections/narrative/weeks/week5"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek6 = dynamic(() => import("./sections/narrative/weeks/week6"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek7 = dynamic(() => import("./sections/narrative/weeks/week7"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek8 = dynamic(() => import("./sections/narrative/weeks/week8"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek9 = dynamic(() => import("./sections/narrative/weeks/week9"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek10 = dynamic(() => import("./sections/narrative/weeks/week10"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek11 = dynamic(() => import("./sections/narrative/weeks/week11"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek12 = dynamic(() => import("./sections/narrative/weeks/week12"), {
+  loading: () => <NarrativeSkeleton />,
+});
+
+const LazyWeek13 = dynamic(() => import("./sections/narrative/weeks/week13"), {
   loading: () => <NarrativeSkeleton />,
 });
 
@@ -90,20 +131,28 @@ export default function Home() {
         return <LazyWeek1 />;
       case "Week 2":
         return <LazyWeek2 />;
-
       case "Week 3":
-        return <div className="text-gray-500 dark:text-gray-400">Week 3 content coming soon...</div>;
-        //return <LazyWeek3 />;
-
+        return <LazyWeek3 />;
       case "Week 4":
-        return <div className="text-gray-500 dark:text-gray-400">Week 4 content coming soon...</div>;
-
+        return <LazyWeek4 />;
       case "Week 5":
-        return <div className="text-gray-500 dark:text-gray-400">Week 5 content coming soon...</div>;
-
+        return <LazyWeek5 />;
       case "Week 6":
-        return <div className="text-gray-500 dark:text-gray-400">Week 6 content coming soon...</div>;
-      // Add cases up to Week 13...
+        return <LazyWeek6 />;
+      case "Week 7":
+        return <LazyWeek7 />;
+      case "Week 8":
+        return <LazyWeek8 />;
+      case "Week 9":
+        return <LazyWeek9 />;
+      case "Week 10":
+        return <LazyWeek10 />;
+      case "Week 11":
+        return <LazyWeek11 />;
+      case "Week 12":
+        return <LazyWeek12 />;
+      case "Week 13":
+        return <LazyWeek13 />;
       default:
         return (
           <div className="text-center text-gray-500 dark:text-gray-400 py-10">
