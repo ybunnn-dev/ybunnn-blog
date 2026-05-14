@@ -7,6 +7,7 @@ const INITIAL_IMAGES = [
   { id: 2, src: "/pictures/week3/placeholder-2.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Orientation" },
   { id: 3, src: "/pictures/week3/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "App Scripting" },
   { id: 4, src: "/pictures/week3/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "DOST Staff" },
+  { id: 5, src: "/pictures/week3/placeholder-5.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "DOST Staff" },
 ];
 
 export default function Week3() {
@@ -26,7 +27,9 @@ export default function Week3() {
     <div className="w-full animate-fade-in">
       {/* Dynamic Header */}
       <div className="mb-6 border-b border-gray-200 dark:border-gray-700 pb-4">
-        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Week 3: System Design and Database Structuring</h3>
+        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
+          Week 3: Refining Ideas and Building the System Foundation
+        </h3>
         <p className="text-cyan-600 dark:text-cyan-400 font-medium mt-1">March 2, 2026 - March 6, 2026</p>
       </div>
 

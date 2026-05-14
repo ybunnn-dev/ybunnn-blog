@@ -5,10 +5,10 @@ import { useState } from "react";
 const INITIAL_IMAGES = [
   { id: 1, src: "/pictures/week12/placeholder-1.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "System Testing" },
   { id: 2, src: "/pictures/week12/placeholder-2.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Bug Fixing" },
-  { id: 3, src: "/pictures/week12/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Mentor Feedback" },
-  { id: 4, src: "/pictures/week12/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "BFP Training" },
-  { id: 5, src: "/pictures/week12/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Fire Safety" },
-  { id: 6, src: "/pictures/week12/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Emergency Prep" },
+  { id: 3, src: "/pictures/week12/placeholder-3.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Mentor Feedback" },
+  { id: 4, src: "/pictures/week12/placeholder-4.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "BFP Training" },
+  { id: 5, src: "/pictures/week12/placeholder-5.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Fire Safety" },
+  { id: 6, src: "/pictures/week12/placeholder-6.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Emergency Prep" },
 ];
 
 export default function Week12() {
@@ -22,7 +22,7 @@ export default function Week12() {
   return (
     <div className="w-full animate-fade-in">
       <div className="mb-6 border-b border-gray-200 dark:border-gray-700 pb-4">
-        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Week 12: Rigorous Testing and Fire Safety Training</h3>
+        <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Week 12: Rigorous Testing and Fire Safety Training - Salamat Francis</h3>
         <p className="text-cyan-600 dark:text-cyan-400 font-medium mt-1">May 4, 2026 - May 8, 2026</p>
       </div>
 

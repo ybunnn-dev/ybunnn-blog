@@ -4,11 +4,10 @@ import { useState } from "react";
 
 const INITIAL_IMAGES = [
   { id: 1, src: "/pictures/week6/placeholder-1.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "WFH Setup" },
-  { id: 2, src: "/pictures/week6/placeholder-2.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Morning Onsite" },
-  { id: 3, src: "/pictures/week6/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Backend Coding" },
-  { id: 4, src: "/pictures/week6/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "System Revisions" },
-  { id: 5, src: "/pictures/week6/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Printer Disposal" },
-  { id: 6, src: "/pictures/week6/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "GAD Training" },
+  { id: 2, src: "/pictures/week6/placeholder-2.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Morning Onsite" },
+  { id: 3, src: "/pictures/week6/placeholder-3.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Backend Coding" },
+  { id: 4, src: "/pictures/week6/placeholder-4.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "System Revisions" },
+  { id: 5, src: "/pictures/week6/placeholder-5.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Printer Disposal" },
 ];
 
 export default function Week6() {

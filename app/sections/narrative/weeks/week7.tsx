@@ -8,7 +8,6 @@ const INITIAL_IMAGES = [
   { id: 3, src: "/pictures/week7/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Account Mgmt" },
   { id: 4, src: "/pictures/week7/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "User Profiles" },
   { id: 5, src: "/pictures/week7/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Frontend UI" },
-  { id: 6, src: "/pictures/week7/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Backend Integration" },
 ];
 
 export default function Week7() {

@@ -3,11 +3,11 @@
 import { useState } from "react";
 
 const INITIAL_IMAGES = [
-  { id: 1, src: "/pictures/week5/placeholder-1.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Scrum Meeting" },
-  { id: 2, src: "/pictures/week5/placeholder-2.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Database Models" },
-  { id: 3, src: "/pictures/week5/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Laravel Backend" },
-  { id: 4, src: "/pictures/week5/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "IPv6 Booklet" },
-  { id: 5, src: "/pictures/week5/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Training Event" },
+  { id: 1, src: "/pictures/week5/placeholder-1.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Scrum Meeting" },
+  { id: 2, src: "/pictures/week5/placeholder-2.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Database Models" },
+  { id: 3, src: "/pictures/week5/placeholder-3.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Laravel Backend" },
+  { id: 4, src: "/pictures/week5/placeholder-4.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "IPv6 Booklet" },
+  { id: 5, src: "/pictures/week5/placeholder-5.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Training Event" },
 ];
 
 export default function Week5() {

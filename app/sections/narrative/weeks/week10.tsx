@@ -4,11 +4,11 @@ import { useState } from "react";
 
 const INITIAL_IMAGES = [
   { id: 1, src: "/pictures/week10/placeholder-1.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Hardware Checks" },
-  { id: 2, src: "/pictures/week10/placeholder-2.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Peripherals" },
-  { id: 3, src: "/pictures/week10/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Mentorship Session" },
-  { id: 4, src: "/pictures/week10/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "DOCS Updates" },
-  { id: 5, src: "/pictures/week10/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Project Timelines" },
-  { id: 6, src: "/pictures/week10/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Milestone Planning" },
+  { id: 2, src: "/pictures/week10/placeholder-2.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Peripherals" },
+  { id: 3, src: "/pictures/week10/placeholder-3.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Mentorship Session" },
+  { id: 4, src: "/pictures/week10/placeholder-4.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "DOCS Updates" },
+  { id: 5, src: "/pictures/week10/placeholder-5.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Project Timelines" },
+  { id: 6, src: "/pictures/week10/placeholder-6.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Milestone Planning" },
 ];
 
 export default function Week10() {

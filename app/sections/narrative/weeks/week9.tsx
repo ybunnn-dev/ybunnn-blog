@@ -3,12 +3,12 @@
 import { useState } from "react";
 
 const INITIAL_IMAGES = [
-  { id: 1, src: "/pictures/week9/placeholder-1.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "STARBOOKS Data" },
+  { id: 1, src: "/pictures/week9/placeholder-1.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "STARBOOKS Data" },
   { id: 2, src: "/pictures/week9/placeholder-2.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "File Organization" },
-  { id: 3, src: "/pictures/week9/placeholder-3.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Pitch Event" },
-  { id: 4, src: "/pictures/week9/placeholder-4.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Research Seminar" },
+  { id: 3, src: "/pictures/week9/placeholder-3.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Pitch Event" },
+  { id: 4, src: "/pictures/week9/placeholder-4.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "Research Seminar" },
   { id: 5, src: "/pictures/week9/placeholder-5.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "Gantt Charts" },
-  { id: 6, src: "/pictures/week9/placeholder-6.jpg", color: "bg-gray-400 dark:bg-gray-600", title: "InternNovation" },
+  { id: 6, src: "/pictures/week9/placeholder-6.jpeg", color: "bg-gray-400 dark:bg-gray-600", title: "InternNovation" },
 ];
 
 export default function Week9() {
